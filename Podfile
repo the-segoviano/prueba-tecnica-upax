@@ -7,4 +7,7 @@ target 'PruebaTecnicaUPAX' do
 
   # Pods for PruebaTecnicaUPAX
 
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
+
 end

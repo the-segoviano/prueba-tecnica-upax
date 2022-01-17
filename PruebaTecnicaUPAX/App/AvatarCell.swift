@@ -18,7 +18,6 @@ class AvatarCell: BaseTableViewCell {
         avatar.translatesAutoresizingMaskIntoConstraints = false
         avatar.contentMode = .scaleAspectFit
         avatar.clipsToBounds = true
-        //avatar.layer.cornerRadius = 80/2
         avatar.image = UIImage(named: "avatar")
         return avatar
     }()
@@ -37,7 +36,7 @@ class AvatarCell: BaseTableViewCell {
         return container
     }()
     
-    func setUpView() {
+    func setUpView(with url: String = "") {
         // selectionStyle = .none
         addSubview(containerAvatar)
         containerAvatar.isUserInteractionEnabled = true
@@ -50,10 +49,8 @@ class AvatarCell: BaseTableViewCell {
         
         avatar.centerXAnchor.constraint(equalTo: containerAvatar.centerXAnchor).isActive = true
         avatar.centerYAnchor.constraint(equalTo: containerAvatar.centerYAnchor).isActive = true
-        //avatar.addBorder(borderColor: .blue, widthBorder: 1)
         avatar.widthAnchor.constraint(equalToConstant: sizeAvatarImageView).isActive = true
         avatar.heightAnchor.constraint(equalToConstant: sizeAvatarImageView).isActive = true
-        
         
     }
     
