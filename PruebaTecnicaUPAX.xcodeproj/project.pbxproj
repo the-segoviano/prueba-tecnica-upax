@@ -177,6 +177,7 @@
 				C663901427953AE500AD3DEB /* Sources */,
 				C663901527953AE500AD3DEB /* Frameworks */,
 				C663901627953AE500AD3DEB /* Resources */,
+				125D4105C2C6ED83F32D21A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +233,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		125D4105C2C6ED83F32D21A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaUPAX/Pods-PruebaTecnicaUPAX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaUPAX/Pods-PruebaTecnicaUPAX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaUPAX/Pods-PruebaTecnicaUPAX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A6BCFAB1CC78A83C3675D13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
