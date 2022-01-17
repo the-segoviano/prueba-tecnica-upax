@@ -72,6 +72,7 @@
 		51E7EF712795DDF100D9CD91 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C663902927953AF100AD3DEB /* Info.plist */,
 				C663902627953AF100AD3DEB /* LaunchScreen.storyboard */,
 				C663902427953AF100AD3DEB /* Assets.xcassets */,
 			);
@@ -161,7 +162,6 @@
 				51E7EF722795DE0500D9CD91 /* Resources */,
 				51E7EF712795DDF100D9CD91 /* SupportingFiles */,
 				51E7EF702795DDDA00D9CD91 /* Delegates */,
-				C663902927953AF100AD3DEB /* Info.plist */,
 			);
 			path = PruebaTecnicaUPAX;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
-				INFOPLIST_FILE = PruebaTecnicaUPAX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PruebaTecnicaUPAX/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
-				INFOPLIST_FILE = PruebaTecnicaUPAX/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PruebaTecnicaUPAX/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
