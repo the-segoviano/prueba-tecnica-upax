@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		C663902527953AF100AD3DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C663902427953AF100AD3DEB /* Assets.xcassets */; };
 		C663902827953AF100AD3DEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C663902627953AF100AD3DEB /* LaunchScreen.storyboard */; };
 		C66390342795C75700AD3DEB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66390332795C75700AD3DEB /* Helpers.swift */; };
+		C663904D27962F4D00AD3DEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C663904C27962F4D00AD3DEB /* GoogleService-Info.plist */; };
 		F8F6BBA7C86C95C99FB98958 /* Pods_PruebaTecnicaUPAX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A185A5B503D2CC248EF57C /* Pods_PruebaTecnicaUPAX.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		C663902727953AF100AD3DEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C663902927953AF100AD3DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66390332795C75700AD3DEB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C663904C27962F4D00AD3DEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		C663901A27953AE500AD3DEB /* PruebaTecnicaUPAX */ = {
 			isa = PBXGroup;
 			children = (
+				C663904C27962F4D00AD3DEB /* GoogleService-Info.plist */,
 				51E7EF7F2795E02300D9CD91 /* App */,
 				51E7EF722795DE0500D9CD91 /* Resources */,
 				51E7EF712795DDF100D9CD91 /* SupportingFiles */,
@@ -227,6 +230,7 @@
 			files = (
 				C663902827953AF100AD3DEB /* LaunchScreen.storyboard in Resources */,
 				C663902527953AF100AD3DEB /* Assets.xcassets in Resources */,
+				C663904D27962F4D00AD3DEB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
