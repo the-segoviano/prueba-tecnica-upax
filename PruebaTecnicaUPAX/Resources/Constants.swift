@@ -15,6 +15,7 @@ struct Constants {
         static let cancel = "Cancelar"
         static let send = "Enviar"
         static let username = "Username"
+        static let close = "Cerrar"
         
     }
     

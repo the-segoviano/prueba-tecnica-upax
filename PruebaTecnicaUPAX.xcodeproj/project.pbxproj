@@ -16,6 +16,7 @@
 		51E7EF832795E05A00D9CD91 /* UsernameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7EF822795E05A00D9CD91 /* UsernameCell.swift */; };
 		51E7EF852795E06E00D9CD91 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7EF842795E06E00D9CD91 /* GraphCell.swift */; };
 		51E7EF872795E09600D9CD91 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7EF862795E09600D9CD91 /* UIColor+ext.swift */; };
+		51E7EF8A2797327800D9CD91 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E7EF892797327800D9CD91 /* PieChartView.swift */; };
 		C663901C27953AE500AD3DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663901B27953AE500AD3DEB /* AppDelegate.swift */; };
 		C663901E27953AE600AD3DEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663901D27953AE600AD3DEB /* SceneDelegate.swift */; };
 		C663902027953AE600AD3DEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663901F27953AE600AD3DEB /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		51E7EF822795E05A00D9CD91 /* UsernameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameCell.swift; sourceTree = "<group>"; };
 		51E7EF842795E06E00D9CD91 /* GraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
 		51E7EF862795E09600D9CD91 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		51E7EF892797327800D9CD91 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		57A185A5B503D2CC248EF57C /* Pods_PruebaTecnicaUPAX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaTecnicaUPAX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D6F8D5FC35F18BDA307C53 /* Pods-PruebaTecnicaUPAX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTecnicaUPAX.release.xcconfig"; path = "Target Support Files/Pods-PruebaTecnicaUPAX/Pods-PruebaTecnicaUPAX.release.xcconfig"; sourceTree = "<group>"; };
 		C663901827953AE500AD3DEB /* PruebaTecnicaUPAX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaUPAX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 		51E7EF722795DE0500D9CD91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51E7EF882797326F00D9CD91 /* Graph */,
 				51E7EF7A2795DFAD00D9CD91 /* Extensiones */,
 				51E7EF732795DF5D00D9CD91 /* BaseViews */,
 				51E7EF782795DF9C00D9CD91 /* Constants.swift */,
@@ -120,6 +123,14 @@
 				51E7EF842795E06E00D9CD91 /* GraphCell.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		51E7EF882797326F00D9CD91 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				51E7EF892797327800D9CD91 /* PieChartView.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		593B83FCFCE0258CD1B35B12 /* Frameworks */ = {
@@ -283,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E7EF8A2797327800D9CD91 /* PieChartView.swift in Sources */,
 				51E7EF852795E06E00D9CD91 /* GraphCell.swift in Sources */,
 				51E7EF7C2795DFCB00D9CD91 /* UIView+ext.swift in Sources */,
 				C663902027953AE600AD3DEB /* ViewController.swift in Sources */,

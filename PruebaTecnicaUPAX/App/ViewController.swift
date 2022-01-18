@@ -242,7 +242,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .userName: break;
         case .graph:
             let detalle: UIViewController = GraphDetailViewController()
-            //self.present(detalle, animated: true, completion: nil)
+            let nav = UINavigationController(rootViewController: detalle)
+            self.present(nav, animated: true, completion: nil)
         }
         
     }
