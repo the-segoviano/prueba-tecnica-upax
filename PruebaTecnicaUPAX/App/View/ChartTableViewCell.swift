@@ -49,30 +49,5 @@ class ChartTableViewCell: BaseTableViewCell {
     }
     
     
-    private func generateGraph(with question: Question, with colors: [String]){
-        let pieChartView = PieChartView()
-        pieChartView.translatesAutoresizingMaskIntoConstraints = false
-        let padding: CGFloat = 20
-        let height: CGFloat = (frame.height - padding * 3) / 2
-        //pieChartView.frame = CGRect(x: 0, y: padding + 45, width: frame.size.width, height: height)
-        var labelledSegments: [LabelledSegment] = [LabelledSegment](), i: Int = 0
-        question.chartData.forEach {
-            labelledSegments.append(
-                LabelledSegment(color: UIColor(hexString: colors[i]),
-                                name: $0.text,
-                                value: CGFloat($0.percetnage)
-                )
-            )
-            i += 1
-        }
-        pieChartView.segments = labelledSegments
-        pieChartView.segmentLabelFont = .systemFont(ofSize: 10)
-        addSubview(pieChartView)
-        pieChartView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
-        pieChartView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
-        pieChartView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
-        
-    }
-    
 
 }
