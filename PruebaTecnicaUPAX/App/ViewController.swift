@@ -7,7 +7,7 @@
 
 import UIKit
 import Photos
-
+import FirebaseStorage
 
 class ViewController: UIViewController {
 
@@ -36,11 +36,14 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let storage = Storage.storage().reference()
+    
     // MARK: - Lyfe-cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .mercury
+        UserDefaults.standard.set(false, forKey: "was-avatar-updated")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,8 +85,95 @@ class ViewController: UIViewController {
     }
     
 
+    func isValidInput(with input: String) -> Bool {
+        let myCharSet = CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        let output: String = input.trimmingCharacters(in: myCharSet.inverted)
+        let isValid: Bool = (input == output)
+        print("\(isValid)")
+        return isValid
+    }
+    
     @objc private func sendRequest(){
-        print(" sendRequest ")
+        // Validar image selected
+        var username: String = ""
+        if let usernametextField = view.viewWithTag(1357911) as? UITextField {
+            
+            username = usernametextField.text!
+            
+            if username.isEmpty == true {
+                let alert = UIAlertController(title: "Campo vacío",
+                                              message: "El campo del nombre de usuario requiere de un valor",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok",
+                                              style: UIAlertAction.Style.default,
+                                              handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            if isValidInput(with: username) == false {
+                let alert = UIAlertController(title: "Caracteres no válidos",
+                                              message: "Solo se aceptan caracteres álfabeticos",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok",
+                                              style: UIAlertAction.Style.default,
+                                              handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+        }
+        
+        if !UserDefaults.standard.bool(forKey: "was-avatar-updated") {
+            let alert = UIAlertController(title: "Seleccione una imagen diferente",
+                                          message: "",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: UIAlertAction.Style.default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        UserDefaults.standard.set(username, forKey: "username")
+        
+        guard let avatarData = UserDefaults.standard.data(forKey: "avatar") else {
+            return
+        }
+        
+        // MARK: Firestore
+        let path: String = "avatar-images/\(username).png"
+        storage.child(path).putData(avatarData, metadata: nil) { [weak self] _, error in
+            guard error == nil else {
+                return
+            }
+            self?.storage.child(path).downloadURL { [weak self] (url, error) in
+                guard let url = url, error == nil else {
+                    return
+                }
+                let urlString = url.absoluteString
+                print(" url-firestore ", urlString, "\n")
+                UserDefaults.standard.set(urlString, forKey: "url-firestore")
+                
+                DispatchQueue.main.async {
+                    
+                    let alert = UIAlertController(title: "Éxito!",
+                                                  message: "Su imagen fue guardada.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok",
+                                                  style: UIAlertAction.Style.default,
+                                                  handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                    
+                    if let usernametextField = self?.view.viewWithTag(1357911) as? UITextField {
+                        usernametextField.text = ""
+                    }
+                }
+                
+            }
+        }
+        
+        
     }
     
     
@@ -149,8 +239,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch CustomSections.getSection(indexPath.row) {
         case .avatar:
             self.handleEventCamera()
-        case .userName:
-            print(" row userName ")
+        case .userName: break;
         case .graph:
             let detalle: UIViewController = GraphDetailViewController()
             //self.present(detalle, animated: true, completion: nil)
@@ -211,7 +300,6 @@ enum MediaSource: String {
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @objc private func handleEventCamera() {
-        print(" selectImage() ")
         selectImage()
     }
     
@@ -358,7 +446,6 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
                 
                 storeImageAndReloadView(imageSelected: imageDataRepresentation)
                 
-                // uploadImage(imageToUpload: imageDataRepresentation, fileName: fileName)
             }
         }
         else{ // Desde camara.
@@ -370,7 +457,6 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
                 
                 storeImageAndReloadView(imageSelected: imageDataRepresentation)
                 
-                // uploadImage(imageToUpload: imageDataRepresentation, fileName: "avatar.jpeg")
             }
             
         }
@@ -381,18 +467,11 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     // MARK: Store in UserDefault the image selected
     //
     func storeImageAndReloadView(imageSelected: Data) {
-        // Almacena imagen en Local
-        // localStorage.setAvatar(value: imageSelected)
-        // Update en vista de Informacion Personal
-        
-        //let avatarCellIndexPath = IndexPath(row: 0, section: 0)
-        //self.tableViewDatos.reloadRows(at: [avatarCellIndexPath], with: .automatic)
-        
-    }
-    
-    
-    func uploadImage(imageToUpload: Data?) {
-        //
+        UserDefaults.standard.set(true, forKey: "was-avatar-updated")
+        UserDefaults.standard.set("", forKey: "url-firestore")
+        UserDefaults.standard.set(imageSelected, forKey: "avatar")
+        let avatarCellIndexPath = IndexPath(row: 0, section: 0)
+        self.tableView.reloadRows(at: [avatarCellIndexPath], with: .automatic)
     }
     
     

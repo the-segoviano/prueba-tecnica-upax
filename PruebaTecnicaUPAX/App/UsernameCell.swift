@@ -11,14 +11,13 @@ class UsernameCell: BaseTableViewCell {
     
     lazy var usernameTextField: UITextField = {
         let field = CustomTextField.getTextField(withPlaceholder: Constants.Strings.username)
-        // field.delegate = self
         field.keyboardType = .alphabet
+        field.tag = 1357911
         return field
     }()
     
     func setUpView() {
         selectionStyle = .none
-        
         addSubview(usernameTextField)
         usernameTextField.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         usernameTextField.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
