@@ -32,8 +32,13 @@ struct Constants {
     }
     
     
+    
+    struct Tags {
+        static let userNameInput = 1357911
+    }
+    
     struct ImageName {
-        static let add: String = "add"
+        static let avatar: String = "avatar"
     }
     
     struct IdForCell {
@@ -41,6 +46,8 @@ struct Constants {
         static let usernameCell: String = "UsernameCell"
         static let avatarCell: String = "AvatarCell"
         static let graphCell: String = "GraphCell"
+        static let chartTableViewCell: String = "ChartTableViewCell"
+        
     }
     
 }

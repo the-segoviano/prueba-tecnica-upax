@@ -24,6 +24,17 @@
 		C663902827953AF100AD3DEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C663902627953AF100AD3DEB /* LaunchScreen.storyboard */; };
 		C66390342795C75700AD3DEB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66390332795C75700AD3DEB /* Helpers.swift */; };
 		C663904D27962F4D00AD3DEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C663904C27962F4D00AD3DEB /* GoogleService-Info.plist */; };
+		C6752F8C27973644008A163F /* UITableViewCell+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F8B27973643008A163F /* UITableViewCell+ext.swift */; };
+		C6752F8F27973665008A163F /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F8E27973665008A163F /* UIViewController+ext.swift */; };
+		C6752F9227973686008A163F /* GraphDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F9127973686008A163F /* GraphDetailViewController.swift */; };
+		C6752F95279736A4008A163F /* QuestionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F94279736A4008A163F /* QuestionsResponse.swift */; };
+		C6752F98279736BD008A163F /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F97279736BD008A163F /* ChartTableViewCell.swift */; };
+		C6752F9B27973748008A163F /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F9A27973748008A163F /* UIImage+ext.swift */; };
+		C6752F9E2797376B008A163F /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752F9D2797376B008A163F /* String+ext.swift */; };
+		C6752FA527973A9D008A163F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752FA427973A9D008A163F /* Alert.swift */; };
+		C6752FC627973E97008A163F /* ViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752FC527973E97008A163F /* ViewController+UITableView.swift */; };
+		C6752FCA27973ED7008A163F /* ViewController+UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752FC927973ED7008A163F /* ViewController+UIImagePickerController.swift */; };
+		C6752FDB27973F97008A163F /* GraphDetailViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6752FDA27973F97008A163F /* GraphDetailViewController+UITableView.swift */; };
 		F8F6BBA7C86C95C99FB98958 /* Pods_PruebaTecnicaUPAX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A185A5B503D2CC248EF57C /* Pods_PruebaTecnicaUPAX.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +61,17 @@
 		C663902927953AF100AD3DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66390332795C75700AD3DEB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C663904C27962F4D00AD3DEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6752F8B27973643008A163F /* UITableViewCell+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ext.swift"; sourceTree = "<group>"; };
+		C6752F8E27973665008A163F /* UIViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
+		C6752F9127973686008A163F /* GraphDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDetailViewController.swift; sourceTree = "<group>"; };
+		C6752F94279736A4008A163F /* QuestionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsResponse.swift; sourceTree = "<group>"; };
+		C6752F97279736BD008A163F /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
+		C6752F9A27973748008A163F /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
+		C6752F9D2797376B008A163F /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
+		C6752FA427973A9D008A163F /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C6752FC527973E97008A163F /* ViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableView.swift"; sourceTree = "<group>"; };
+		C6752FC927973ED7008A163F /* ViewController+UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIImagePickerController.swift"; sourceTree = "<group>"; };
+		C6752FDA27973F97008A163F /* GraphDetailViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphDetailViewController+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +108,10 @@
 		51E7EF722795DE0500D9CD91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6752FA327973A73008A163F /* Utils */,
 				51E7EF882797326F00D9CD91 /* Graph */,
 				51E7EF7A2795DFAD00D9CD91 /* Extensiones */,
 				51E7EF732795DF5D00D9CD91 /* BaseViews */,
-				51E7EF782795DF9C00D9CD91 /* Constants.swift */,
-				C66390332795C75700AD3DEB /* Helpers.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -110,6 +131,10 @@
 			children = (
 				51E7EF7B2795DFCB00D9CD91 /* UIView+ext.swift */,
 				51E7EF862795E09600D9CD91 /* UIColor+ext.swift */,
+				C6752F8B27973643008A163F /* UITableViewCell+ext.swift */,
+				C6752F8E27973665008A163F /* UIViewController+ext.swift */,
+				C6752F9A27973748008A163F /* UIImage+ext.swift */,
+				C6752F9D2797376B008A163F /* String+ext.swift */,
 			);
 			path = Extensiones;
 			sourceTree = "<group>";
@@ -117,10 +142,9 @@
 		51E7EF7F2795E02300D9CD91 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C663901F27953AE600AD3DEB /* ViewController.swift */,
-				51E7EF802795E03400D9CD91 /* AvatarCell.swift */,
-				51E7EF822795E05A00D9CD91 /* UsernameCell.swift */,
-				51E7EF842795E06E00D9CD91 /* GraphCell.swift */,
+				C6752FA227973A1E008A163F /* Controller */,
+				C6752FA127973A0D008A163F /* View */,
+				C6752FA027973A00008A163F /* Model */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -178,6 +202,55 @@
 				51E7EF702795DDDA00D9CD91 /* Delegates */,
 			);
 			path = PruebaTecnicaUPAX;
+			sourceTree = "<group>";
+		};
+		C6752FA027973A00008A163F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6752F94279736A4008A163F /* QuestionsResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6752FA127973A0D008A163F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6752F97279736BD008A163F /* ChartTableViewCell.swift */,
+				51E7EF802795E03400D9CD91 /* AvatarCell.swift */,
+				51E7EF822795E05A00D9CD91 /* UsernameCell.swift */,
+				51E7EF842795E06E00D9CD91 /* GraphCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6752FA227973A1E008A163F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6752FC427973E64008A163F /* ViewController+Extensions */,
+				C6752F9127973686008A163F /* GraphDetailViewController.swift */,
+				C663901F27953AE600AD3DEB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6752FA327973A73008A163F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C66390332795C75700AD3DEB /* Helpers.swift */,
+				51E7EF782795DF9C00D9CD91 /* Constants.swift */,
+				C6752FA427973A9D008A163F /* Alert.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C6752FC427973E64008A163F /* ViewController+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6752FC527973E97008A163F /* ViewController+UITableView.swift */,
+				C6752FC927973ED7008A163F /* ViewController+UIImagePickerController.swift */,
+				C6752FDA27973F97008A163F /* GraphDetailViewController+UITableView.swift */,
+			);
+			path = "ViewController+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,16 +370,27 @@
 				51E7EF8A2797327800D9CD91 /* PieChartView.swift in Sources */,
 				51E7EF852795E06E00D9CD91 /* GraphCell.swift in Sources */,
 				51E7EF7C2795DFCB00D9CD91 /* UIView+ext.swift in Sources */,
+				C6752FC627973E97008A163F /* ViewController+UITableView.swift in Sources */,
+				C6752FCA27973ED7008A163F /* ViewController+UIImagePickerController.swift in Sources */,
+				C6752F9227973686008A163F /* GraphDetailViewController.swift in Sources */,
 				C663902027953AE600AD3DEB /* ViewController.swift in Sources */,
 				51E7EF752795DF6B00D9CD91 /* BaseButton.swift in Sources */,
 				51E7EF772795DF8600D9CD91 /* CustomTextField.swift in Sources */,
+				C6752F9E2797376B008A163F /* String+ext.swift in Sources */,
+				C6752FA527973A9D008A163F /* Alert.swift in Sources */,
 				51E7EF812795E03400D9CD91 /* AvatarCell.swift in Sources */,
 				51E7EF872795E09600D9CD91 /* UIColor+ext.swift in Sources */,
 				51E7EF7E2795DFF200D9CD91 /* BaseTableViewCell.swift in Sources */,
+				C6752F98279736BD008A163F /* ChartTableViewCell.swift in Sources */,
 				C663901C27953AE500AD3DEB /* AppDelegate.swift in Sources */,
+				C6752F8C27973644008A163F /* UITableViewCell+ext.swift in Sources */,
+				C6752F9B27973748008A163F /* UIImage+ext.swift in Sources */,
+				C6752FDB27973F97008A163F /* GraphDetailViewController+UITableView.swift in Sources */,
 				51E7EF792795DF9C00D9CD91 /* Constants.swift in Sources */,
 				C663901E27953AE600AD3DEB /* SceneDelegate.swift in Sources */,
+				C6752F95279736A4008A163F /* QuestionsResponse.swift in Sources */,
 				C66390342795C75700AD3DEB /* Helpers.swift in Sources */,
+				C6752F8F27973665008A163F /* UIViewController+ext.swift in Sources */,
 				51E7EF832795E05A00D9CD91 /* UsernameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

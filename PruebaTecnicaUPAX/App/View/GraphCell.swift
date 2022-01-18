@@ -11,6 +11,8 @@ class GraphCell: BaseTableViewCell {
     
     func setUpView() {
         selectionStyle = .none
+        textLabel?.text = "Gráfica"
+        textLabel?.textAlignment = .center
     }
     
 }

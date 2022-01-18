@@ -12,7 +12,7 @@ class UsernameCell: BaseTableViewCell {
     lazy var usernameTextField: UITextField = {
         let field = CustomTextField.getTextField(withPlaceholder: Constants.Strings.username)
         field.keyboardType = .alphabet
-        field.tag = 1357911
+        field.tag = Constants.Tags.userNameInput
         return field
     }()
     

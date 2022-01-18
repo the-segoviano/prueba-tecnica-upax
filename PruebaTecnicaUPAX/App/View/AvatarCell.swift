@@ -17,7 +17,7 @@ class AvatarCell: BaseTableViewCell {
         let avatar = UIImageView()
         avatar.translatesAutoresizingMaskIntoConstraints = false
         avatar.contentMode = .scaleAspectFit
-        avatar.image = UIImage(named: "avatar")
+        avatar.image = UIImage(named: Constants.ImageName.avatar)
         avatar.layer.cornerRadius = 70/2
         avatar.clipsToBounds = true
         return avatar
